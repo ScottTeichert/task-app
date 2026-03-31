@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Task List</h1>
+
+    <p>Logged in as: {{ username }}</p>
+
+    <a href="/add">Add a new task</a> |
+    <a href="/logout">Logout</a>
+
+    {% if tasks %}
+        <ul>
+        {% for task in tasks %}
+            <li>
+                <strong>{{ task.title }}</strong><br>
+                Owner: {{ task.owner }}<br>
+                Due Date: {{ task.due_date }}<br>
+                Priority: {{ task.priority }}<br>
+                Details: {{ task.details }}<br>
+                Status: {{ task.status }}<br>
+                Prospect ID: {{ task.prospect_id }}<br>
+                <a href="/edit/{{ task.id }}">Edit</a> |
+                <a href="/delete/{{ task.id }}">Delete</a>
+            </li>
+            <br>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tasks found.</p>
+    {% endif %}
+</body>
+</html>

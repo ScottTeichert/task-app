@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Task</title>
+</head>
+<body>
+    <h1>Edit Task</h1>
+
+    <form method="POST">
+        <label>Title:</label><br>
+        <input type="text" name="title" value="{{ task.title }}" required><br><br>
+
+        <label>Owner:</label><br>
+        <input type="text" name="owner" value="{{ task.owner }}" required><br><br>
+
+        <label>Due Date:</label><br>
+        <input type="text" name="due_date" value="{{ task.due_date }}" required><br><br>
+
+        <label>Priority:</label><br>
+        <input type="text" name="priority" value="{{ task.priority }}" required><br><br>
+
+        <label>Details:</label><br>
+        <textarea name="details">{{ task.details }}</textarea><br><br>
+
+        <label>Status:</label><br>
+        <input type="text" name="status" value="{{ task.status }}" required><br><br>
+
+        <label>Prospect ID:</label><br>
+        <input type="text" name="prospect_id" value="{{ task.prospect_id }}"><br><br>
+
+        <button type="submit">Update Task</button>
+    </form>
+
+    <br>
+    <a href="/tasks">Back to Task List</a>
+</body>
+</html>

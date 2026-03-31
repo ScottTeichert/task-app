@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Add a New Task</h1>
+
+    <form method="POST" action="/add">
+        <label>Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>Owner:</label><br>
+        <input type="text" name="owner" required><br><br>
+
+        <label>Due Date:</label><br>
+        <input type="text" name="due_date" required><br><br>
+
+        <label>Priority:</label><br>
+        <input type="text" name="priority" required><br><br>
+
+        <label>Details:</label><br>
+        <textarea name="details"></textarea><br><br>
+
+        <label>Status:</label><br>
+        <input type="text" name="status" value="Not Started"><br><br>
+
+        <label>Prospect ID:</label><br>
+        <input type="text" name="prospect_id"><br><br>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <br>
+    <a href="/tasks">Back to Task List</a>
+</body>
+</html>
